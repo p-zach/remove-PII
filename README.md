@@ -15,7 +15,8 @@ PII Removed: Although XXXXX lived in XXXXX, his nephew XXXXX lived in XXXXX. Bot
 ## Usage
 Command line:
 ```
-usage: Removes personally identifiable information (PII) like names and phone numbers from text strings and files.
+usage: Removes personally identifiable information (PII) like names and phone numbers 
+       from text strings and files.
        [-h] [-f inputPath outputPath] [-s TEXT]
 
 optional arguments:
@@ -28,14 +29,17 @@ Code:
 ```
 import cleanString from removepii
 
-text = """My name is Robert. I work at Google. My phone number is 800-100-2222 and my email address is robbie@gmail.com."""
+text = """My name is Robert. I work at Google. My phone number is 800-100-2222
+and my email address is robbie@gmail.com."""
+
 print(cleanString(text)) 
 # output: "My name is XXXXX. I work at XXXXX. My phone number is XXXXX and my email address is XXXXX."
 
-# piiNE is a list parameter with a default value of ["PERSON", "ORGANIZATION", "GPE", "LOCATION"]. The program will remove
-# any named entities that fit into the categories in the list.
-# piiNums is a list parameter with a default value of ["PHONE", "EMAIL", "SSN"]. Like piiNE, any information in the text
-# that falls into a category in the list will be removed.
+# piiNE is a list parameter with a default value of ["PERSON", "ORGANIZATION", "GPE", "LOCATION"]. 
+# The program will remove any named entities that fit into the categories in the list.
+# piiNums is a list parameter with a default value of ["PHONE", "EMAIL", "SSN"]. Like piiNE, any 
+# information in the text that falls into a category in the list will be removed.
+
 print(cleanString(text, piiNE=["PERSON"], piiNums=["PHONE"]) 
 # output: "My name is XXXXX. I work at Google. My phone number is XXXXX and my email address is robbie@gmail.com."
 
@@ -49,5 +53,7 @@ cleanFile("pii.pdf", "clean.txt")
 ## Requirements
 
 pip package `nltk`
+
 pip package `pdfminer.six` if PDF reading is desired
+
 pip package `bs4` if HTML reading is desired
