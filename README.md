@@ -1,4 +1,4 @@
-# PII-Scissors
+# remove-PII
 
 Automatically removes personally identifiable information (PII) from text files and strings. Has the capability to remove names of people and organizations; names of geo-political entities (GPEs) and locations; and phone numbers, email addresses, and social security numbers. Only the PII is removed; the bulk of the sentence and the majority of the relevant information is retained.
 
