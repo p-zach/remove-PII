@@ -52,8 +52,10 @@ cleanFile("pii.pdf", "clean.txt")
 
 ## Requirements
 
-pip package `nltk`
+pip packages:
 
-pip package `pdfminer.six` if PDF reading is desired
+`nltk`
 
-pip package `bs4` if HTML reading is desired
+`pdfminer.six` if PDF reading is desired
+
+`bs4` if HTML reading is desired
